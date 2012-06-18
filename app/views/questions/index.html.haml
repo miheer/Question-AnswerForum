@@ -1,0 +1,24 @@
+= stylesheet_link_tag "questions", "custom_message"
+.top-right.row
+  = link_to "Ask Question", '#', :class => 'btn btn-primary', :data => {:target => '#new_question_modal'}
+.main_content{:style => 'float:left;'}
+  = render 'questions/show', :question => @recent_question, :answers => @answers, :vote => false if !@recent_question.blank? 
+.view_questions
+  = render 'questions/display_questions', :questions => @related_questions, :rec_question => @recent_question if !@related_questions.blank?
+.modal.fade#new_question_modal
+  .modal-header
+    %a{:href => "#", :class => "close", :'data-dismiss' => 'modal'} x
+    .row
+      %h3 
+        %label{:class => 'span2', :style => 'width:148px;'}  
+          %b{:class => 'span3'} Ask Question
+  .modal-body{:style => 'margin-left:30px;'}
+    .validation.error{:style => 'display:none'}
+      %p 
+    = render :template => 'questions/new'
+:javascript
+  $('a[data-target]').click(function(){
+    $($(this).data('target')).modal('show')
+
+  });
+

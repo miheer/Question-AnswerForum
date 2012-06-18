@@ -1,0 +1,5 @@
+- flash.each do |type, message|
+  %div.alert.general.alert-block.fade.in{ "data-alert" => "alert", :class => twitterized_type(type) }
+    %a{:href => "#", :class => "close", :'data-dismiss' => 'alert'} x
+    %p= message
+

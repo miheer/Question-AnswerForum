@@ -1,0 +1,7 @@
+.top-right{:style => 'float:right;width:230px;'}
+  %h2 Sign in
+  = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'form-inline'}) do |f|
+    = f.input :email
+    = f.input :password, :label => "Password"
+    = f.button :submit, :value => "Login", :class => 'btn btn-primary'
+  = render "links"

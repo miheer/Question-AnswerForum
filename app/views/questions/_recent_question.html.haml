@@ -1,0 +1,7 @@
+%table#recent_question.table.table-striped.table-bordered.table-condensed.pretty
+  %thead
+    %tr
+      %th Recent Question
+  %tbody
+    %tr
+      %td= link_to rec_question.title, questions_path(:question_id => rec_question.id)

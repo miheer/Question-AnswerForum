@@ -1,0 +1,10 @@
+$('.answer_count').html("<b> #{escape_javascript(@count.to_s)} Answers");
+if($('.answers_content').length == 0) 
+{
+$('.answers_content table tbody').append("#{escape_javascript(render 'answers/show', :answer => @answer, :vote => true)}");
+}
+else
+{
+$('.answer_count').after("#{escape_javascript(render 'answers/index', :answers => [@answer], :vote => true)}");
+}
+humane.success('Answer saved for given question');

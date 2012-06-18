@@ -1,0 +1,8 @@
+class ApplicationController < ActionController::Base
+  protect_from_forgery
+
+  def after_sign_in_path_for(options = {})
+    questions_path
+  end
+
+end

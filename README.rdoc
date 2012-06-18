@@ -1,0 +1,48 @@
+Implementing QnA Forum like Stackflow 
+
+Resource Used in implementing QnA Forum
+ 1) Ruby1.9.3p0
+ 2) Rails 3.2.2
+ 3) SASS
+ 4) Coffeescript
+ 5) Devise 2.0.4
+ 6) Bootstrap2.0 with simple form
+ 7) humane js
+
+
+Higher Overview Of Project 
+
+  1) First Screen is Login Screen which forced user to either login or register itself with websites.
+  2) After login/Registration, User is redirected to '/questions' url, its list total number of question ask in forum in side bar and recent question with answer is shown in middle of '/questions'. 
+
+  3) Clicking on title of question in side bar of page bring that question to front page of page with answer listing.
+
+  4) Clicking on Title of question in front view of question pages , redirect user to question show page where he can fill answer.
+
+  5) on "/questions" pages, on top right side there is a link to add question, form is opened in pop up when button is clicked.On pop up form , form is submitted through ajax.
+
+  6) On "/questions/:id' show page, there is option for vote up and vote down, entering answer , all of these done through without page refreshes i.e through ajax.
+
+  7) There is also validation to check if same user does not click same answer for vote two times. Error message is shown 
+
+  8) Error message is shown on top-right side of page.
+
+
+Table Used in Project 
+  1)User
+  2)Question
+  3)Answer
+  4)UserRatedAnswer
+
+
+Code in controller 
+  Code for vote up and down is written in answer controller 
+  There is multiple partial used in answer index page as well question show page.
+
+
+Assume In voting 
+
+   User who has can rate his answer as well
+
+
+Model spec is also included

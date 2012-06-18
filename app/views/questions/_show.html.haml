@@ -1,0 +1,14 @@
+.span6
+  %b= link_to question.title, question_path(:id => question.id)
+%hr/
+.question_content
+  %span
+    = question.content
+.user-info
+  Asked_by : #{mail_to question.user.email, question.user.try(:full_name)}
+%hr/
+
+.answer_count
+  %b #{answers.count} Answers
+= render 'answers/index', :answers => answers, :vote => vote
+

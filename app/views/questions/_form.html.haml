@@ -1,0 +1,4 @@
+= f.input :title, :input_html => {:rows => 2, :cols => 40}
+= f.input :content, :input_html => {:rows => 5, :cols => 40}
+= f.input :user_id , :as => :hidden , :input_html => {:value => current_user.id}
+= f.submit :Save, :class => 'btn btn-primary'

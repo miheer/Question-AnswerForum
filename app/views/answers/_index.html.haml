@@ -1,0 +1,5 @@
+.answers_content
+  - if !answers.blank? 
+    %table
+      - answers.each do|answer|
+        = render 'answers/show', :answer => answer, :vote => vote  

@@ -1,0 +1,5 @@
+= stylesheet_link_tag "application","bootstrap", "libnotify", "questions"
+= yield :stylesheets
+= javascript_include_tag "application", "bootstrap/bootstrap", "humane"
+= yield :javascripts
+= csrf_meta_tags

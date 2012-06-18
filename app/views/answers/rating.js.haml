@@ -1,0 +1,2 @@
+$('.vote_#{@answer.id} .vote_count b').html("#{escape_javascript(@answer.rating_point.to_s)}");
+humane.success("#{escape_javascript(@message)}");

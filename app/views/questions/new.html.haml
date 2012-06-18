@@ -1,0 +1,2 @@
+= simple_form_for @question, :url => questions_path, :html => {:class => 'form-horizontal', :remote => true, :method => 'post'} do|f|
+  = render 'questions/form', :f => f

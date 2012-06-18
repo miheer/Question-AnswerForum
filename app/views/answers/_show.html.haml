@@ -1,0 +1,14 @@
+- if !answer.id.blank?
+  %tr.box
+    - if vote 
+      %td
+        %div{:class => "vote_#{answer.id}"}
+          %span1
+            =link_to image_tag('vote_up.png'), rating_answer_path(:id => answer.id, :vote => 1), {:title => 'Vote Up', :remote => true}
+          .vote_count
+            %b= answer.rating_point
+          %span1
+            =link_to image_tag('vote_down.gif'), rating_answer_path(:id => answer.id, :vote => -1), {:title => 'Vote Down', :remote => true}
+    %td
+      .answer_for_content
+        = answer.content

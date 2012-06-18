@@ -1,0 +1,7 @@
+%table#questions_display.table.table-striped.table-bordered.table-condensed.pretty
+  %thead
+    %tr
+      %th Question
+  %tbody
+    - questions.each do|question|
+      = render 'question', :question => question
